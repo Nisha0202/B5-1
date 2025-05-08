@@ -12,12 +12,15 @@ console.log(value.toUpperCase()); // No error as the value is a string according
 2. `unknown` Type
 This is used to tell the complilier we don't really know the type of the value so you should first check the type before doing any operation. If the type is not checked before performing any operation then the compiler will show error.
 
-```let value: unknown = "hello";
+``
+let value: unknown = "hello";
 
 value.toUpperCase(); // Error in compile-time saying "Property 'toUpperCase' does not exist on type 'unknown'."
 if (typeof value === "string") {
   console.log(value.toUpperCase()); // Output: HELLO
-}```
+}
+
+``
 
 3. `never` Type
 There are times when we call functions to perform tasks but it never finishes executing. It either crashes(throw an error) or stuck into an infinite loop or for in exhaustive Checking.  In such cases `never` type comes to use. It tells the complilier not to expect any type of value in return from a function after executing the function.
