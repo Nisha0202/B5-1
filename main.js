@@ -73,14 +73,3 @@ async function squareAsync(n) {
         }
     });
 }
-console.log(concatenateArrays(["a", "b"], ["c"])); // ["a", "b", "c"]
-console.log(concatenateArrays([1, 2], [3, 4], [5])); // [1, 2, 3, 4, 5]
-squareAsync(4).then(console.log); // 16 after 1s
-squareAsync(-3).catch(console.error); // Error: Negative number not allowed
-const products = [
-    { name: "Pen", price: 10 },
-    { name: "Notebook", price: 25 },
-    { name: "Bag", price: 50 }
-];
-console.log(getMostExpensiveProduct(products));
-// { name: "Bag", price: 50 }
