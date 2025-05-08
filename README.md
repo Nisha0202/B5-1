@@ -1,15 +1,19 @@
 # 3. Explain the difference between any, unknown, and never types in TypeScript.
 
 `any`, `unknown`, and `never` are special types of values in TypeScript that are used in different cases to represent the type of values.
+
 1. `any` Type
 
 This type is used when we want the compiler to opt out for type checking, This type used when the given variable can be of any type. Whether the variable holds a integer or string or object or anything else, there won't be compile-time error when perform any operation or calling the variable. It is used for dynamic content where we don't know the type of the variable.
+
 ```let value: any = 43;
 value = "String";
 value();        // No error at compile time (though it’s not a function) but will give a run-time error 
 console.log(value.toUpperCase()); // No error as the value is a string according to last initialization. Output: STRING
 ```
+
 2. `unknown` Type
+
 This is used to tell the complilier we don't really know the type of the value so you should first check the type before doing any operation. If the type is not checked before performing any operation then the compiler will show error.
 
 ``
@@ -23,6 +27,7 @@ if (typeof value === "string") {
 ``
 
 3. `never` Type
+
 There are times when we call functions to perform tasks but it never finishes executing. It either crashes(throw an error) or stuck into an infinite loop or for in exhaustive Checking.  In such cases `never` type comes to use. It tells the complilier not to expect any type of value in return from a function after executing the function.
 
 ```
@@ -48,7 +53,7 @@ function fn(x: string | number) {
   }
 }
 
-``
+```
 
 I hope this blog helps you to understand about the mentioned types and their nature.
 
