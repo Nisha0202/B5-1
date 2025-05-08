@@ -11,6 +11,7 @@ let value: any = 43;
 value = "String";
 value();        // No error at compile time (though it’s not a function) but will give a run-time error 
 console.log(value.toUpperCase()); // No error as the value is a string according to last initialization. Output: STRING
+
 ```
 
 2. `unknown` Type
@@ -20,7 +21,7 @@ This is used to tell the complilier we don't really know the type of the value s
 ```ts
 let value: unknown = "hello";
 
-value.toUpperCase(); // Error in compile-time saying "Property `toUpperCase` does not exist on type `unknown`."
+value.toUpperCase(); // Error in compile-time saying "Property 'toUpperCase' does not exist on type 'unknown'."
 if (typeof value === "string") {
   console.log(value.toUpperCase()); // Output: HELLO
 }
